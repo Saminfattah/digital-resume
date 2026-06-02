@@ -27,11 +27,11 @@ const personSchema = {
     "BigQuery"
   ],
   award: [
-    "CFA Research Challenge Champion",
-    "Microsoft Office Specialist Champion",
+    "Champion of CFA Institute Research Challenge in Bangladesh 2025-26",
+    "Champion of Microsoft Office Specialist Championship 2025 National Round",
     "ExcelMaestros Champion",
-    "Data Hackathon Champion",
-    "FINXCEL Champion"
+    "Champion of Career Edge Data Hackathon 2024",
+    "Champion of FINXCEL 9.0 2025"
   ]
 };
 

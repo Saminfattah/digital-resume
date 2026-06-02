@@ -21,7 +21,6 @@ import {
   PieChart,
   Send,
   Sigma,
-  Sparkles,
   Trophy
 } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -43,39 +42,43 @@ const heroStats = [
 const highlights = [
   {
     icon: Trophy,
-    year: "2024",
-    title: "CFA Research Challenge Champion",
-    body: "Led research, valuation, investment thesis development, and final defense for Robi Axiata."
+    year: "2025-26",
+    title: "Champion of CFA Institute Research Challenge in Bangladesh",
+    by: "CFA Institute",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7426127644238196736/",
+    body: "Led research, valuation, investment thesis development, and final defense at the national level."
   },
   {
     icon: Medal,
-    year: "2023",
-    title: "Microsoft Office Specialist Champion",
-    body: "National recognition for applied Excel, modeling discipline, and productivity mastery."
+    year: "2025",
+    title: "Champion of Microsoft Office Specialist Championship National Round",
+    by: "Microsoft",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7332368376322789377/",
+    body: "National recognition for applied Microsoft Office expertise, Excel discipline, and productivity mastery."
   },
   {
     icon: Sigma,
-    year: "2023",
+    year: "2024",
     title: "ExcelMaestros Champion",
+    by: "BUP Finance Society",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7197953228108414976/",
     body: "Converted spreadsheet logic into decision-ready models under competitive constraints."
   },
   {
     icon: BrainCircuit,
     year: "2024",
-    title: "Data Hackathon Champion",
+    title: "Champion of Career Edge Data Hackathon",
+    by: "BUP Career Club",
+    href: "https://www.linkedin.com/posts/saminfattah_careeredge2024-hackathonchampion-dataanalytics-activity-7279734271357939712-OtBS?utm_source=share&utm_medium=member_desktop",
     body: "Built analytical workflows that transformed raw data into clear recommendations."
   },
   {
     icon: ChartCandlestick,
-    year: "2024",
-    title: "FINXCEL Champion",
+    year: "2025",
+    title: "Champion of FINXCEL 9.0",
+    by: "EWU Investment and Finance Club",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7327950755519258624/",
     body: "Demonstrated finance, strategy, and valuation strength in a national competition setting."
-  },
-  {
-    icon: Sparkles,
-    year: "2024",
-    title: "UNDP Frontier Technology Mentee",
-    body: "Selected for exposure to emerging technology, innovation, and decision science."
   }
 ];
 
@@ -346,8 +349,12 @@ export function BrandSite() {
           {highlights.map((item, index) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <motion.a
                 key={item.title}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${item.title} LinkedIn post by ${item.by}`}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -355,7 +362,7 @@ export function BrandSite() {
                 transition={{ duration: 0.5, delay: index * 0.04 }}
                 whileHover={{ y: -6 }}
                 className={cn(
-                  "glass shine rounded-lg p-5",
+                  "glass shine block rounded-lg p-5 outline-none transition focus-visible:ring-2 focus-visible:ring-primary",
                   index === 0 && "md:col-span-2 lg:col-span-1"
                 )}
               >
@@ -366,8 +373,11 @@ export function BrandSite() {
                   <span className="font-mono text-xs text-muted-foreground">{item.year}</span>
                 </div>
                 <h3 className="mt-5 text-xl font-semibold tracking-normal">{item.title}</h3>
+                <p className="mt-2 text-xs font-medium uppercase tracking-[0.18em] text-primary">
+                  by {item.by}
+                </p>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.body}</p>
-              </motion.div>
+              </motion.a>
             );
           })}
         </div>
