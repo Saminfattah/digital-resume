@@ -84,35 +84,38 @@ const highlights = [
 
 const caseStudies = [
   {
-    kicker: "Case Study 01",
-    title: "DSE Insight",
-    headline: "Building a Valuation Platform for Bangladeshi Investors",
+    kicker: "Project 01",
+    title: "DSEInsight",
+    headline: "A Valuation Dashboard for DSE-Listed Companies",
     summary:
-      "A research-driven platform concept that makes valuation, data collection, and dashboard analysis more accessible for investors following the Dhaka Stock Exchange.",
+      "A Python and Streamlit valuation tool that makes equity analysis more accessible for Dhaka Stock Exchange companies. The app combines Reverse DCF, P/E relative valuation, peer selection, scraped DSE data, sensitivity analysis, and clear valuation outputs in a finance-friendly dashboard.",
+    githubHref: "https://github.com/Saminfattah/DSEInsight",
     pillars: [
       "Reverse DCF",
-      "Relative Valuation",
-      "Data Collection",
-      "Dashboard Design",
-      "Investor Workflow"
+      "P/E Relative Valuation",
+      "DSE Data Scraping",
+      "Peer Comparison",
+      "Sensitivity Analysis",
+      "Streamlit Dashboard"
     ],
-    result: "A practical intelligence layer for moving from company data to valuation judgment."
+    result: "A practical valuation workflow for investors, analysts, and finance students moving from market price to implied growth, peer multiples, and fair-value judgment."
   },
   {
-    kicker: "Case Study 02",
-    title: "Robi Axiata Equity Research",
-    headline: "Winning Bangladesh's CFA Research Challenge",
+    kicker: "Project 02",
+    title: "DSE Quant Lab",
+    headline: "A Quant Research Interface for DSE Signals and Backtests",
     summary:
-      "An end-to-end equity research process combining financial modeling, DCF, relative valuation, DDM, investment thesis construction, and final recommendation defense.",
+      "A Vercel-ready Next.js dashboard for DSE market research, model signal review, ticker analysis, watchlists, and backtest visualization. It is designed as research and decision support, connecting a Python data worker, hosted PostgreSQL, model predictions, and a polished analytical frontend.",
+    githubHref: "https://github.com/Saminfattah/dse-quant-lab-app",
     pillars: [
-      "Research Process",
-      "Financial Model",
-      "DCF",
-      "Relative Valuation",
-      "DDM",
-      "Recommendation"
+      "Next.js App Router",
+      "Signal Review",
+      "Ticker Analytics",
+      "Backtest Queue",
+      "Watchlist",
+      "PostgreSQL"
     ],
-    result: "A championship-level investment case built on evidence, valuation rigor, and clear communication."
+    result: "A market research control center that separates decision support from trade execution while surfacing signals, diagnostics, rankings, and backtest outputs."
   }
 ];
 
@@ -414,19 +417,18 @@ export function BrandSite() {
                     ))}
                   </div>
                   <div className="mt-8 flex flex-wrap gap-3">
-                    {["Live Demo", "GitHub", "Screenshots"].map((cta) => (
-                      <Button
-                        key={cta}
-                        asChild
-                        size="sm"
-                        variant={cta === "Live Demo" ? "default" : "secondary"}
+                    <Button asChild size="sm">
+                      <a
+                        href={study.githubHref}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View ${study.title} on GitHub`}
                       >
-                        <a href="#" aria-label={`${study.title} ${cta}`}>
-                          {cta}
-                          <ChevronRight />
-                        </a>
-                      </Button>
-                    ))}
+                        <Github />
+                        View GitHub
+                        <ChevronRight />
+                      </a>
+                    </Button>
                   </div>
                 </div>
                 <CaseVisual index={index} title={study.title} result={study.result} />
