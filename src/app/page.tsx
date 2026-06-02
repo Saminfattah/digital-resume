@@ -12,8 +12,8 @@ const personSchema = {
   ],
   url: "https://samin-alfattah.com",
   sameAs: [
-    "https://www.linkedin.com/in/samin-alfattah",
-    "https://github.com/samin-alfattah"
+    "https://www.linkedin.com/in/saminfattah/",
+    "https://github.com/Saminfattah"
   ],
   knowsAbout: [
     "Equity Research",

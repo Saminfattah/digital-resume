@@ -565,19 +565,19 @@ export function BrandSite() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="secondary">
-                <a href="mailto:hello@samin-alfattah.com">
+                <a href="mailto:alfattahsamin@gmail.com">
                   <Mail />
                   Email
                 </a>
               </Button>
               <Button asChild variant="secondary">
-                <a href="https://www.linkedin.com/in/samin-alfattah">
+                <a href="https://www.linkedin.com/in/saminfattah/">
                   <Linkedin />
                   LinkedIn
                 </a>
               </Button>
               <Button asChild variant="secondary">
-                <a href="https://github.com/samin-alfattah">
+                <a href="https://github.com/Saminfattah">
                   <Github />
                   GitHub
                 </a>
