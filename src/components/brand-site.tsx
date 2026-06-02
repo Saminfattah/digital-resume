@@ -33,9 +33,7 @@ import { cn } from "@/lib/utils";
 const navItems = ["Work", "Wins", "Expertise", "Contact"];
 
 const heroStats = [
-  { value: "6+", label: "National Championships" },
-  { value: "96%", label: "Forecast Accuracy" },
-  { value: "97%", label: "Sales Forecast Accuracy" },
+  { value: "5", label: "National Championships" },
   { value: "2+", label: "Years Professional Experience" }
 ];
 
@@ -161,7 +159,7 @@ const expertise = {
 };
 
 const certifications = [
-  "CFA Level I Passed",
+  "CFA Level 1 Passed",
   "BBA Finance & Banking",
   "FMVA",
   "Equity Analyst",
@@ -271,7 +269,7 @@ export function BrandSite() {
               Samin Al Fattah
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-              CFA Level I | Valuation Specialist | Data & BI Analyst
+              CFA Level 1 Passed | Valuation Specialist | Data & BI Analyst
             </p>
             <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
               I combine finance, analytics, and research to turn complex data into
@@ -677,13 +675,13 @@ function PortraitCard() {
             A professional brand built around valuation discipline, analytical clarity, and research-backed decisions.
           </p>
         </div>
-        <div className="relative mx-auto h-64 w-52 overflow-hidden rounded-lg border border-primary/30 bg-background shadow-[0_24px_80px_rgba(2,6,23,0.55)]">
+        <div className="relative mx-auto size-64 overflow-hidden rounded-full border border-primary/30 bg-background shadow-[0_24px_80px_rgba(2,6,23,0.55)]">
           <Image
-            src="/images/profile-picture.png"
+            src="/images/profile-picture.jpeg"
             alt="Samin Al Fattah profile picture"
             fill
             className="object-cover object-top"
-            sizes="(max-width: 1024px) 208px, 208px"
+            sizes="256px"
             priority
           />
         </div>

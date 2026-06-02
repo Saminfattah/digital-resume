@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Samin Al Fattah"
   },
   description:
-    "Personal brand website for Samin Al Fattah, a finance professional, CFA Level I passed candidate, valuation specialist, data analyst, and national competition champion.",
+    "Personal brand website for Samin Al Fattah, a finance professional, CFA Level 1 Passed candidate, valuation specialist, data analyst, and national competition champion.",
   keywords: [
     "Samin Al Fattah",
     "Finance Analyst Bangladesh",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       "Finance, analytics, and research translated into investment insights, business decisions, and measurable impact.",
     images: [
       {
-        url: "/images/profile-picture.png",
+        url: "/images/profile-picture.jpeg",
         width: 1024,
         height: 1024,
         alt: "Samin Al Fattah profile picture"
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Samin Al Fattah | Finance x Data x Research",
     description:
-      "CFA Level I passed, valuation specialist, data and BI analyst, and national competition champion.",
-    images: ["/images/finance-data-research-hero.png"]
+      "CFA Level 1 Passed, valuation specialist, data and BI analyst, and national competition champion.",
+    images: ["/images/profile-picture.jpeg"]
   },
   alternates: {
     canonical: "/"

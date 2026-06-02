@@ -28,7 +28,7 @@ Then open `http://localhost:3000`.
 - `src/app/page.tsx`: update LinkedIn and GitHub URLs in structured data.
 - `src/components/brand-site.tsx`: update email, LinkedIn, GitHub, and project links.
 - `public/resume/samin-al-fattah-cv.pdf`: live CV download used by the site.
-- `public/images/profile-picture.png`: profile image used in the story section and metadata.
+- `public/images/profile-picture.jpeg`: profile image used in the story section and metadata.
 - `public/images/finance-data-research-hero.png`: generated non-stock hero visual used by the site.
 
 ## SEO Included

@@ -4,7 +4,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Samin Al Fattah",
-  image: "https://samin-alfattah.com/images/profile-picture.png",
+  image: "https://samin-alfattah.com/images/profile-picture.jpeg",
   jobTitle: [
     "Finance Professional",
     "Equity Research and Valuation Specialist",
