@@ -33,6 +33,12 @@ export const metadata: Metadata = {
       "Finance, analytics, and research translated into investment insights, business decisions, and measurable impact.",
     images: [
       {
+        url: "/images/profile-picture.png",
+        width: 1024,
+        height: 1024,
+        alt: "Samin Al Fattah profile picture"
+      },
+      {
         url: "/images/finance-data-research-hero.png",
         width: 1536,
         height: 1024,

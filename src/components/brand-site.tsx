@@ -22,7 +22,6 @@ import {
   Send,
   Sigma,
   Sparkles,
-  Target,
   Trophy
 } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -280,9 +279,9 @@ export function BrandSite() {
                 </a>
               </Button>
               <Button asChild size="lg" variant="secondary">
-                <a href="/resume/Samin-Al-Fattah-Resume.pdf" download>
+                <a href="/resume/samin-al-fattah-cv.pdf" download>
                   <Download />
-                  Download Resume
+                  Download CV
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -319,7 +318,7 @@ export function BrandSite() {
 
       <Section id="why" eyebrow="Why I Do What I Do" title="Markets ask better questions when finance and data sit at the same table.">
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
-          <PortraitPlaceholder />
+          <PortraitCard />
           <div className="space-y-6 text-base leading-8 text-slate-300">
             <p>
               My work starts with curiosity: why a company is valued the way it is,
@@ -654,19 +653,27 @@ function Section({
   );
 }
 
-function PortraitPlaceholder() {
+function PortraitCard() {
   return (
-    <div className="glass relative min-h-[420px] overflow-hidden rounded-lg p-6">
+    <div className="glass relative min-h-[460px] overflow-hidden rounded-lg p-6">
       <div className="absolute inset-0 chart-grid opacity-35" />
-      <div className="relative z-10 flex h-full flex-col justify-between">
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[linear-gradient(180deg,transparent,rgba(2,6,23,0.92))]" />
+      <div className="relative z-10 flex h-full min-h-[412px] flex-col justify-between">
         <div>
-          <Badge>Professional Image Placeholder</Badge>
+          <Badge>Finance x Analytics Profile</Badge>
           <p className="mt-5 max-w-sm text-sm leading-6 text-muted-foreground">
-            Replace this designed placeholder with a professional portrait when available.
+            A professional brand built around valuation discipline, analytical clarity, and research-backed decisions.
           </p>
         </div>
-        <div className="mx-auto grid size-44 place-items-center rounded-full border border-primary/30 bg-[radial-gradient(circle,rgba(56,189,248,0.20),rgba(15,23,42,0.85))] text-5xl font-semibold text-primary">
-          SA
+        <div className="relative mx-auto h-64 w-52 overflow-hidden rounded-lg border border-primary/30 bg-background shadow-[0_24px_80px_rgba(2,6,23,0.55)]">
+          <Image
+            src="/images/profile-picture.png"
+            alt="Samin Al Fattah profile picture"
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 1024px) 208px, 208px"
+            priority
+          />
         </div>
         <div className="grid grid-cols-3 gap-3">
           {["Markets", "Models", "Signals"].map((item) => (
